@@ -38,7 +38,7 @@ None of NVDA's default commands are changed. You can reassign any of these keys 
 
 The add-on source is in the `addon` folder. To build the package yourself, zip the contents of `addon` (`manifest.ini`, `appModules`, `globalPlugins`, `doc`) and rename the zip file to end in `.nvda-addon`.
 
-Releases are built automatically: pushing a tag such as `v1.0.2` runs the GitHub Actions workflow, which builds the package and attaches it to a new release.
+Releases are built automatically: when a release is published on GitHub (for example with the tag `v1.0.2`), a GitHub Actions workflow builds the package from the `addon` folder and attaches the `.nvda-addon` file to that release.
 
 ## Feedback
 

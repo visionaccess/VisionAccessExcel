@@ -1,9 +1,8 @@
-name: Build and release add-on
+name: Build and attach add-on
 
 on:
-  push:
-    tags:
-      - "v*"
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
@@ -33,9 +32,8 @@ jobs:
           name: visionAccessExcel-${{ steps.meta.outputs.version }}
           path: "*.nvda-addon"
 
-      - name: Publish GitHub release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          files: "*.nvda-addon"
-          body_path: CHANGELOG.md
+      - name: Attach to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" *.nvda-addon --clobber --repo "${{ github.repository }}"
