@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VisionAccess Excel Enhancements - Help</title>
+</head>
+<body>
+<h1>VisionAccess Excel Enhancements</h1>
+<p>Version 1.0.2. Author: Mukesh Jain, VisionAccess. Email: <a href="mailto:info@visionaccess.org">info@visionaccess.org</a>. Website: <a href="https://www.visionaccess.org">www.visionaccess.org</a>.</p>
+<p>This NVDA add-on makes Microsoft Excel faster and easier to use with a screen reader. All commands work only inside Excel. If you are editing a cell, press Escape before using the list and sheet commands.</p>
+
+<h2>Keyboard commands</h2>
+<table border="1">
+<tr><th>Command</th><th>What it does</th></tr>
+<tr><td>Control+Shift+D</td><td>Lists every cell with data in the current worksheet. Each entry gives the cell address, its value, and says "formula" if the cell contains a formula. Press Enter on a cell to move to it.</td></tr>
+<tr><td>Control+Shift+R</td><td>Lists the cells with data in the current row, with their column headers. Press Enter to move to a cell.</td></tr>
+<tr><td>Control+Shift+C</td><td>Lists the cells with data in the current column, with their row headers. Press Enter to move to a cell.</td></tr>
+<tr><td>Control+Shift+S</td><td>Opens the Sheet Manager.</td></tr>
+<tr><td>NVDA+Alt+T</td><td>Reports the name and range of the table at the current cell. In the Create Table or Resize Table dialog, reports the table range again.</td></tr>
+<tr><td>NVDA+Alt+U</td><td>Reports the used range of the sheet: where the data starts and ends, and how many rows and columns it covers.</td></tr>
+<tr><td>NVDA+Alt+S</td><td>Reports a summary of the selection: address, number of cells, cells with data, and for numbers the sum, average, minimum and maximum.</td></tr>
+</table>
+<p>None of NVDA's default commands are changed: NVDA+Shift+R and NVDA+Shift+C still set row and column headers, and NVDA+Shift+S still toggles sleep mode. You can change any of these keys in NVDA menu, Preferences, Input gestures, category "VisionAccess Excel".</p>
+
+<h2>Cell lists</h2>
+<p>The cell list dialog has a Filter field, the list of cells, a "Go to cell" button and a Close button. Focus starts on the list. Type in the Filter field (Alt+F) to show only cells whose address or value contains that text. Press Enter on a cell to close the dialog and land on that cell in Excel. Press Escape to close without moving.</p>
+
+<h2>Sheet Manager</h2>
+<p>The Sheet Manager lists all sheets in the workbook with their position and whether they are active, protected or hidden. Select a sheet and use:</p>
+<ul>
+<li><b>Go to sheet</b> (Enter): activates the sheet.</li>
+<li><b>Rename</b> (Alt+R): gives the sheet a new name.</li>
+<li><b>Move up</b> (Alt+U) and <b>Move down</b> (Alt+D): change the sheet's position.</li>
+<li><b>Protect / Unprotect</b> (Alt+P): protects the sheet with an optional password, or removes protection.</li>
+<li><b>Hide / Unhide</b> (Alt+H): hides or shows the sheet.</li>
+<li><b>Insert new sheet</b> (Alt+I): adds a sheet with an optional name.</li>
+<li><b>Delete</b> (Alt+L): permanently deletes the sheet after you confirm.</li>
+</ul>
+
+<h2>Blank announcement</h2>
+<p>When you press Delete on a cell and the cell becomes empty, NVDA says "blank". When you are typing in a cell, the formula bar or any edit field in Excel and you delete the last character with Backspace or Delete, NVDA says "blank". You can also turn on "Announce blank when moving to an empty cell" in the settings.</p>
+
+<h2>Table range in dialogs</h2>
+<p>When you open the Create Table dialog (Control+T) or the Resize Table dialog (Table Design, Resize Table), NVDA announces the range of cells the table covers, for example "Table range: A1:D20". Press NVDA+Alt+T to hear it again.</p>
+
+<h2>Settings</h2>
+<p>Open NVDA menu, Preferences, Settings, and choose "VisionAccess Excel". You can turn each announcement on or off, show or hide headers in the cell lists, and set the maximum number of cells listed (default 2000).</p>
+
+<h2>Requirements</h2>
+<p>NVDA 2023.1 or later and Microsoft Excel 2013 or later (including Microsoft 365).</p>
+
+<h2>Contact</h2>
+<p>Feedback and bug reports: <a href="mailto:info@visionaccess.org">info@visionaccess.org</a>, phone 7021030307.</p>
+</body>
+</html>
